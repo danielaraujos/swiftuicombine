@@ -43,7 +43,8 @@ struct ContentView: View {
         
         VStack {
             
-            // More Content
+            ProfileRow()
+            
             VStack {
                 NavigationLink(destination: FAQView()){
                     MenuRow()

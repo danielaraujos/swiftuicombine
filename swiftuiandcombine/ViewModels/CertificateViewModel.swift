@@ -28,12 +28,13 @@ final class CertificateViewModel: ObservableObject {
                         
                         let id = data["id"] as? String ?? ""
                         let course = data["course"] as? String ?? ""
-                        let dataValue = (data["data"] as AnyObject).dateValue()
+                        let dataValue = (data["date"] as AnyObject).dateValue()
                         let date = dataValue.formatDate()
                         let logo = data["logo"] as? String ?? ""
                         let instructor = data["instructor"] as? String ?? ""
                         
                         let certificate = Certificate(id: id, course: course, date: date, logo: logo, instructor: instructor)
+                        print(certificate)
                         
                         self.certificates.append(certificate)
                     }

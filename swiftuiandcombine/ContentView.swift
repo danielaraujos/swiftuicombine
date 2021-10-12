@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
     @State private var contentOffset = CGFloat(0)
     
     var body: some View {
@@ -34,6 +35,7 @@ struct ContentView: View {
             
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .accentColor(colorScheme == .dark ? .white : Color(#colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)))
     }
     
     
@@ -59,12 +61,8 @@ struct ContentView: View {
                     })
                 
             }
-            .padding(16)
-            .background(Color("Background 1"))
-            .background(VisualEffectBlur(blurStyle: .systemUltraThinMaterialDark))
-            .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Color.white, lineWidth: 1).blendMode(.overlay))
-            .mask(RoundedRectangle(cornerRadius: 20, style: .continuous))
-            .padding(.top, 20)
+            .blurBackground()
+            
             
             Text("Varsion 1.0")
                 .foregroundColor(.white.opacity(0.8))

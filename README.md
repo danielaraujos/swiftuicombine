@@ -4,7 +4,7 @@ O objetivo desse projeto foi criar um aplicativo utilizando SwiftUI para apresen
 
 
 ## Demo
-| Application | Login |
+| Principal | View |
 | --- | --- |
 | <img src="https://raw.githubusercontent.com/danielaraujos/swiftuicombine/master/assets/image1.png" width=300 align=center> | <img src="https://raw.githubusercontent.com/danielaraujos/swiftuicombine/master/assets/image2.png" width=300 align=center> | 
 
